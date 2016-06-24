@@ -36,7 +36,11 @@ object DemoClient {
     implicit val timeout = Timeout(10.seconds)
     val initialContacts = Set(
       ActorPath.fromString("akka.tcp://ClusterSystem@127.0.0.1:2551/system/receptionist"),
-      ActorPath.fromString("akka.tcp://ClusterSystem@127.0.0.1:3000/system/receptionist"))
+      ActorPath.fromString("akka.tcp://ClusterSystem@127.0.0.1:3000/system/receptionist") // どっちか片方でも動く
+    )
+    // 2つ登録→起動→memberを落とす→member復旧 とした場合、落ちてた期間のメッセージはtimeoutになる模様。
+    // （自動で復旧したmemberにリトライはしてくれない）
+
     val settings = ClusterClientSettings(system)
       .withInitialContacts(initialContacts)
 
