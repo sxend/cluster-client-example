@@ -14,7 +14,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-  val akkaVersion = "2.4.7"
+  val akkaVersion = "2.4.4"
   val shapelessVersion = "2.3.0"
   val spec2Version = "3.7"
   Seq(

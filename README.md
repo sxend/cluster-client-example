@@ -1,4 +1,4 @@
 akka cluster client example
 ===========================
 
-akka 2.4.7
+akka 2.4.4
