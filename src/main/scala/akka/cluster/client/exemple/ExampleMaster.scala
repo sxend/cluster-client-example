@@ -16,7 +16,7 @@ object ExampleMaster {
   class ClusterMaster extends Actor with ActorLogging {
     def receive = {
       case e =>
-        log.info(s"receive [$e] from $sender")
+        log.info(s"receive message: [$e] from $sender")
         sender() ! s"master's response of [$e]"
     }
   }

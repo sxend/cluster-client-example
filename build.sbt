@@ -14,8 +14,7 @@ resolvers ++= Seq(
 )
 
 libraryDependencies ++= {
-  val akkaVersion = "2.4.4"
-  val shapelessVersion = "2.3.0"
+  val akkaVersion = "2.4.7"
   val spec2Version = "3.7"
   Seq(
     "com.typesafe.akka" %% "akka-actor" % akkaVersion,
@@ -45,7 +44,6 @@ libraryDependencies ++= {
     "com.typesafe.akka" %% "akka-http-xml-experimental" % akkaVersion,
     "com.typesafe.akka" %% "akka-persistence-query-experimental" % akkaVersion,
     "com.typesafe.akka" %% "akka-typed-experimental" % akkaVersion,
-    "com.chuusai" %% "shapeless" % shapelessVersion,
     "org.specs2" %% "specs2-html" % spec2Version % "test",
     "org.specs2" %% "specs2-junit" % spec2Version % "test",
     "org.specs2" %% "specs2-core" % spec2Version % "test"
